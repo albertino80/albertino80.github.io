@@ -1,5 +1,4 @@
-﻿# albertino80.github.io
-Alberto Bignotti
+﻿Alberto Bignotti
 
 ![Me](abignotti.png)
 

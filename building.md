@@ -110,15 +110,21 @@ mkdir ..\x64\bin\libcurl
 * Open solution file with VS2017 `curltut\curl-7.58.0\projects\Windows\VC15\curl-all.sln`
 * Select configuration `DLL Release - DLL OpenSSL - DLL LibSSH2`
 * For each project change output folder to: `c:\dev_gcc\curltut\x64\bin\libcurl`
-* Modify include paths:
+* Project `libcurl`, add this preprocessor defines:
+  * `HAVE_LIBZ`
+  * `HAVE_ZLIB_H`
+* Project `libcurl`, modify include paths:
   * `C:\dev_gcc\curltut\x64\bin\openssl\include`
   * `C:\dev_gcc\curltut\libssh2-1.8.0\include`
-* Project libcurl modify library paths:
+  * `C:\dev_gcc\curltut\zlib-1.2.11`
+* Project `libcurl`, modify library paths:
   * `C:\dev_gcc\curltut\x64\bin\openssl\lib`
   * `C:\dev_gcc\curltut\x64\bin\libssh2\src\Release`
-* Project libcurl modify libaries:
-  * libssl.lib
-  * libcrypto.lib
+  * `C:\dev_gcc\curltut\x64\bin\zlib`
+* Project `libcurl`, modify libaries:
+  * `libssl.lib` (and remove `ssleay32.lib`)
+  * `libcrypto.lib` (and remove `libeay32.lib`)
+  * `zlibwapi.lib`
 * Build
 * Binaries: `curltut\curl-7.58.0\build\Win64\VC15\DLL Release - DLL OpenSSL - DLL LibSSH2`
 

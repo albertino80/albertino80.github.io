@@ -1,0 +1,18 @@
+digraph LIBCURL_dependency {
+ratio = fill;
+rankdir=LR;
+node [style=filled];
+node [shape = doublecircle]; LIBCURL;
+node [shape = circle];
+OPENSSL -> ZLIB [color="0.649 0.701 0.701"];
+LIBSSH2 -> OPENSSL [color="0.649 0.701 0.701"];
+LIBSSH2 -> ZLIB [color="0.649 0.701 0.701"];
+LIBCURL -> LIBSSH2 [color="0.649 0.701 0.701"];
+LIBCURL -> OPENSSL [color="0.649 0.701 0.701"];
+LIBCURL -> ZLIB [color="0.649 0.701 0.701"];
+
+OPENSSL [color="deepskyblue1"; label="bigno"];
+ZLIB [color="darkolivegreen1"];
+LIBSSH2 [color="darkgoldenrod1"];
+LIBCURL [color="brown1"];
+}
