@@ -73,6 +73,27 @@ mkdir ..\x64\bin\libssh2
 ```
 * Open CMake-GUI.exe
 * ![cmake_configuration](cmake.png)
+* Changes:
+```
+Ungrouper Entries
+	CRYPTO_BACKEND = OpenSSL
+	OPENSSL_INCLUDE_DIR = C:\dev_gcc\curltut\x64\bin\openssl\include
+BUILD
+	BUILD_SHARED_LIBS = True
+DLL
+	DLL_LIBEAY32 = C:/dev_gcc/curltut/x64/bin/openssl/bin/libcrypto-1_1-x64.dll
+	DLL_SSLEAY32 = C:/dev_gcc/curltut/x64/bin/openssl/bin/libssl-1_1-x64.dll
+ENABLE
+	ENABLE_ZLIB_COMPRESSION = True
+LIB
+	LIB_EAY_RELEASE = C:\dev_gcc\curltut\x64\bin\openssl\lib\libcrypto.lib
+SSL
+	LIB_EAY_RELEASE = C:\dev_gcc\curltut\x64\bin\openssl\lib\libcrypto.lib
+ZLIB
+	ZLIB_INCLUDE_DIR = C:\dev_gcc\curltut\zlib-1.2.11
+	ZLIB_LIBRARY_RELEASE = C:\dev_gcc\curltut\x64\bin\zlib\zlibwapi.lib
+```
+
 * Open solution file with VS2017 `curltut\x64\bin\libssh2\libssh2.sln` and build configuration `Release`
 * Binaries: `curltut\x64\bin\libssh2\src\Release`
 

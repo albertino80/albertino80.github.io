@@ -1,2 +1,8 @@
 ﻿# albertino80.github.io
-[Building libcurl](building.md)
+Alberto Bignotti
+
+![Me](abignotti.png)
+
+**My pages:**
+
+[Libcurl page](libcurl.md)
