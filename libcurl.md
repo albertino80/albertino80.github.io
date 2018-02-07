@@ -24,6 +24,8 @@ Message from Daniel Stenberg ([https://daniel.haxx.se/](https://daniel.haxx.se/)
 
 [Everything curl (ebook)](https://www.gitbook.com/book/bagder/everything-curl/details)
 
+[HTTP Basics](https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html)
+
 [Command line examples](curl.md)
 
 [Exercises with libcurl](libcurl_examples.md)
