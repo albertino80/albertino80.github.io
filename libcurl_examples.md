@@ -20,4 +20,5 @@
   * CURLOPT_POST + CURLOPT_POSTFIELDS + CURLOPT_POSTFIELDSIZE
   * `curl_mime_init` + CURLOPT_MIMEPOST + `curl_mime_free`
   * `curl_mime_addpart` + `curl_mime_name` + `curl_mime_data` + `curl_mime_filename` + `curl_mime_type` + `curl_mime_filedata`
+  * `curl_slist_append` + CURLOPT_HTTPHEADER + `curl_slist_free_all`
   * read proxy configuration from registry
