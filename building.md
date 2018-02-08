@@ -13,7 +13,8 @@ Download and run 	`Windows Installer (EXE)`, remeber to add `perl.exe` to `PATH`
 ### Nasm installation
 * Download zipped binaries
 * Unizp in a foler
-* Add nasm.exe to `PATH` system variable
+* Add folder of nasm.exe to `PATH` system variable
+* Create a system variable NASM_PATH with path of nasm.exe
 
 ### CMake installation
 Download and run `Windows win64-x64 Installer`
@@ -72,6 +73,7 @@ cd curltut\libssh2-1.8.0
 mkdir ..\x64\bin\libssh2
 ```
 * Open CMake-GUI.exe
+* Configure for Visual Studio 15 2017 Win64
 * ![cmake_configuration](cmake.png)
 * Changes:
 ```
@@ -97,6 +99,28 @@ ZLIB
 * Open solution file with VS2017 `curltut\x64\bin\libssh2\libssh2.sln` and build configuration `Release`
 * Binaries: `curltut\x64\bin\libssh2\src\Release`
 
+### nghttp2 1.30.0
+
+* Download sources from https://github.com/nghttp2/nghttp2
+* Unzip to `curltut\nghttp2-master`
+* Open cmake-gui
+* Configure for Visual Studio 15 2017 Win64
+* Change this variables:
+```
+CMAKE_CONFIGURATION_TYPES = Release
+CMAKE_INSTALL_PREFIX = C:\dev_gcc\curltut\x64\bin\nghttp2\bin
+LIB_EAY_RELEASE = C:\dev_gcc\curltut\x64\bin\openssl\lib\libcrypto.lib
+SSL_EAY_RELEASE = C:\dev_gcc\curltut\x64\bin\openssl\lib\libssl.lib
+OPENSSL_ROOT_DIR = C:\dev_gcc\curltut\x64\bin\openssl
+ZLIB_LIBRARY = C:\dev_gcc\curltut\x64\bin\zlib\zlibwapi.lib
+ZLIB_ROOT C:\dev_gcc\curltut\zlib-1.2.11
+```
+* Build (from command line)
+```
+cd C:\dev_gcc\curltut\x64\bin\nghttp2\
+cmake --build . --config Release
+```
+
 ### libcurl 7.58.0
 
 [https://curl.haxx.se/download.html](https://curl.haxx.se/download.html)
@@ -113,18 +137,22 @@ mkdir ..\x64\bin\libcurl
 * Project `libcurl`, add this preprocessor defines:
   * `HAVE_LIBZ`
   * `HAVE_ZLIB_H`
+  * `USE_NGHTTP2`
 * Project `libcurl`, modify include paths:
   * `C:\dev_gcc\curltut\x64\bin\openssl\include`
   * `C:\dev_gcc\curltut\libssh2-1.8.0\include`
   * `C:\dev_gcc\curltut\zlib-1.2.11`
+  * `C:\dev_gcc\curltut\x64\bin\nghttp2\bin\include`
 * Project `libcurl`, modify library paths:
   * `C:\dev_gcc\curltut\x64\bin\openssl\lib`
   * `C:\dev_gcc\curltut\x64\bin\libssh2\src\Release`
   * `C:\dev_gcc\curltut\x64\bin\zlib`
+  * `C:\dev_gcc\curltut\x64\bin\nghttp2\bin\lib`
 * Project `libcurl`, modify libaries:
   * `libssl.lib` (and remove `ssleay32.lib`)
   * `libcrypto.lib` (and remove `libeay32.lib`)
   * `zlibwapi.lib`
+  * `nghttp2.lib`
 * Build
 * Binaries: `curltut\curl-7.58.0\build\Win64\VC15\DLL Release - DLL OpenSSL - DLL LibSSH2`
 
