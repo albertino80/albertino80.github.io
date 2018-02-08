@@ -12,6 +12,7 @@
   * reuse curl handle
   * `curl_easy_reset`
   * `CURLOPT_HTTP_VERSION` + `CURL_HTTP_VERSION_2_0` [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
+  * example compute JwtToken [https://jwt.io](https://jwt.io)
 
 * **ex003** - fetch large download ( [http://ipv4.download.thinkbroadband.com/](http://ipv4.download.thinkbroadband.com/) )
   * STOP_DOWNLOAD_AFTER_THIS_MANY_BYTES + MINIMAL_PROGRESS_FUNCTIONALITY_INTERVAL
@@ -34,3 +35,11 @@
   * CURLOPT_PRIVATE + CURLINFO_PRIVATE
   * `curl_multi_init` + `curl_multi_cleanup` + `curl_multi_setopt`
   * `curl_multi_add_handle` + `curl_multi_perform` + `curl_multi_info_read` + `curl_multi_remove_handle`
+
+* **ex007** - ftps
+  * [https://curl.haxx.se/libcurl/relatedlibs.html](https://curl.haxx.se/libcurl/relatedlibs.html)
+
+* **ex008*** - slack API
+  * rapidjson [http://rapidjson.org/](http://rapidjson.org/)
+  * fmt::format [http://fmtlib.net/](http://fmtlib.net/)
+  *  [https://bignoplayground.slack.com](https://bignoplayground.slack.com)
