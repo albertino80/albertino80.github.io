@@ -45,6 +45,7 @@ Download and run `Windows win64-x64 Installer`
 * Open VS2017 x64 command prompt
 * Take a look at configuration flags: `openssl-1.1.0g\INSTALL`
 * Execute this commands:
+
 ```
 set PATH=C:\dev_gcc\curltut\x64\bin\zlib;%PATH%
 
@@ -60,6 +61,7 @@ nmake test
 
 nmake install
 ```
+
 * Binaries: `curltut\x64\bin\openssl`
 
 ### libssh2 1.8.0
