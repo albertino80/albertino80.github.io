@@ -1,4 +1,6 @@
-﻿* **ex001** - fetch [www.google.it](www.google.it)
+﻿[Download examples](https://github.com/albertino80/albertino80.github.io/tree/master/examples)
+
+* **ex001** - fetch [www.google.it](www.google.it)
   * `curl_global_init` + `curl_global_cleanup`
   * CURLOPT_WRITEFUNCTION + CURLOPT_WRITEDATA (output to `std::string` or `FILE*`)
   * CURLOPT_ERRORBUFFER
